@@ -1,0 +1,249 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  max-width: 70%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 40px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+header a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+.container {
+  position: relative; /* แก้ตำแหน่งให้อยู่ในพื้นที่ */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.circle {
+  width: 17px;
+  height: 17px;
+  border-radius: 100%;
+  background-color: rgb(255, 99, 79);
+}
+
+.back {
+  position: relative; /* เปลี่ยนเป็น relative เพื่อให้สัมพันธ์กับ container */
+  background-color: rgb(51, 51, 51);
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.img {
+  position: relative;
+  z-index: 1;
+}
+
+.back img {
+  
+  transform: translateX(-80px); /* ขยับภาพไปทางซ้าย */
+  object-fit: cover;
+  max-width: 800px;
+}
+
+.box {
+  position: absolute;
+  transform: translateX(-50px); /* ขยับกล่องไปทางซ้าย */
+  top: 50%; /* กลางแนวตั้ง */
+  left: 60%; /* กำหนดตำแหน่ง */
+  width: 500px;
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  background-color: #FF4D4D;
+  clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
+  padding: 0 10px;
+  z-index: 2; /* อยู่ด้านบน */
+  transform: translate(-50%, -50%); /* ตรงกลางโดยสัมพันธ์กับ top และ left */
+}
+
+.box h1 {
+  padding: 0 10px;
+  color: white;
+  margin: 0;
+}
+
+ul {
+  border-bottom: 2px solid white;
+  width: 50%;
+  padding: 2px 0px;
+  margin: 0 10px;
+}
+
+button {
+  margin: 0px 10px;
+  padding: 10px 10px;
+  font-weight: 1000;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 5px;
+  background-color: yellow;
+  transition: all 0.5s ease;
+}
+
+button:hover {
+  background-color: rgb(219, 219, 1);
+}
+
+.box p {
+  max-width: 400px;
+  color: white;
+  text-align: justify;
+  padding: 0 10px;
+}
+
+.square {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background-color: rgb(87, 87, 87);
+  z-index: 0; /* อยู่ด้านล่างสุด */
+}
+
+.top {
+  top: 50%;
+  right: 95%;
+  transform: rotate(30deg);
+}
+
+.right {
+  top: 20%;
+  left: 95%;
+  transform: rotate(240deg);
+}
+
+.rights {
+  top: 60%;
+  left: 82%;
+  transform: rotate(210deg);
+}
+
+.lefts {
+  top: 20%;
+  right: 72%;
+  transform: rotate(110deg);
+}
+
+.containers {
+  position: relative; /* ทำให้สัมพันธ์กับ parent */
+}
+.material-icons{
+  font-size: 2rem;
+  color: white;
+}
+.trainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+  z-index: 1;
+}
+.trainer h1{
+  margin: 0;
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+}
+.trainer p{
+  color: white;
+}
+.back.small{
+  height: 50vh;
+}
+.square.big{
+  top: 10%;
+  left: 10%;
+  transform: rotate(60deg);
+}
+.footer {
+  background-color: rgb(255, 255, 255);
+  color: rgb(51, 51, 51);
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-section {
+  text-align: center;
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.footer-section p,
+.footer-section ul {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.footer-section ul{
+  width: 100%;
+}
+.footer-section li {
+  list-style: none;
+  margin-bottom: 8px;
+}
+
+.footer-section li a {
+  color: rgb(51, 51, 51);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section li a:hover {
+  color: #FFC107;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  font-size: 1.5rem;
+  color: rgb(51, 51, 51);
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #FFC107;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  border-top: 1px solid #444;
+  padding-top: 10px;
+  font-size: 0.8rem;
+}
