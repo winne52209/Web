@@ -41,7 +41,7 @@ header a {
   position: relative; /* เปลี่ยนเป็น relative เพื่อให้สัมพันธ์กับ container */
   background-color: rgb(51, 51, 51);
   width: 100%;
-  height: 60vh;
+  height: 81vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -57,7 +57,7 @@ header a {
   
   transform: translateX(-80px); /* ขยับภาพไปทางซ้าย */
   object-fit: cover;
-  max-width: 800px;
+  max-width: 1300px;
 }
 
 .box {
@@ -66,7 +66,7 @@ header a {
   top: 50%; /* กลางแนวตั้ง */
   left: 60%; /* กำหนดตำแหน่ง */
   width: 500px;
-  height: 550px;
+  height: 900px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -79,6 +79,7 @@ header a {
 }
 
 .box h1 {
+  font-size: 3rem;
   padding: 0 10px;
   color: white;
   margin: 0;
@@ -95,6 +96,7 @@ button {
   margin: 0px 10px;
   padding: 10px 10px;
   font-weight: 1000;
+  font-size: 1rem;
   border: 1px solid rgb(0, 0, 0);
   border-radius: 5px;
   background-color: yellow;
@@ -107,6 +109,7 @@ button:hover {
 
 .box p {
   max-width: 400px;
+  font-size: 1.1rem;
   color: white;
   text-align: justify;
   padding: 0 10px;
@@ -155,7 +158,7 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 100px;
   text-align: center;
   z-index: 1;
 }
@@ -169,7 +172,7 @@ button:hover {
   color: white;
 }
 .back.small{
-  height: 50vh;
+  height: 70vh;
 }
 .square.big{
   top: 10%;
@@ -246,4 +249,31 @@ button:hover {
   border-top: 1px solid #444;
   padding-top: 10px;
   font-size: 0.8rem;
+}
+@media (max-width: 2100px) {
+  .back img{
+    max-width: 1000px;
+  }
+  .box {
+    height: 700px;
+  }
+}
+@media (max-width: 1000px) {
+  .back{
+    height: 50vh;
+  }
+  .back img{
+    max-width: 500px;
+  }
+  .box {
+    height: 400px;
+    width: 300px;
+    left: 40%;
+  }
+  .box h1{
+    font-size: 1rem;
+  }
+  .box p{
+    font-size: 0.8rem;
+  }
 }
